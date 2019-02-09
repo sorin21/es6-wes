@@ -1,26 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Spread Examples</title>
 </head>
+
 <body>
-<script>
-  const inventors = ['Einstein', 'Newton', 'Galileo'];
-  const newInventors = ['Musk', 'Jobs'];
-  inventors.push(...newInventors);
-  console.log(inventors);
+  <script>
+    const inventors = ['Einstein', 'Newton', 'Galileo'];
+    const newInventors = ['Musk', 'Jobs'];
+    inventors.push(...newInventors);
+    console.log(inventors);
 
-  const name = ['Wes', 'Bos'];
+    const name = ['Wes', 'Bos'];
 
-  function sayHi(first, last) {
-    alert(`Hey there ${first} ${last}`);
-  }
+    function sayHi(first, last) {
+      console.log('arguments', [...arguments])
+      alert(`Hey there ${first} ${last}`);
+    }
 
-  sayHi(...name);
+    // sayHi(...name);
 
-</script>
+
+    function addAges(a, b, c, d) {
+      return a + b + c + d;
+    }
+    const ages = [10, 20, 30, 10]
+    var sum1 = addAges(...ages);
+    console.log(sum1);
+
+  </script>
 </body>
+
 </html>
-
-
