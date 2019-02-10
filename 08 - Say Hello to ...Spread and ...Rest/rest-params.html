@@ -24,6 +24,16 @@
     const [captain, assistant, ...players] = team;
     console.log(captain, assistant, players)
 
+    function destructingParams(...[a, b]) {
+      console.log(a)
+    }
+    destructingParams('Sorin');
+
+    // const myArr = ['Sroin', 'dsad']
+    // function destructingParams2(...myArr) {
+    //   console.log(Sroin)
+    // }
+    // destructingParams2('Sorin');
   </script>
 </body>
 
