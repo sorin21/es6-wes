@@ -20,7 +20,11 @@
     const deepDish = {
       pizzaName: 'Deep Dish',
       size: 'Medium',
-      ingredients: ['Marinara', 'Italian Sausage', 'Dough', 'Cheese']
+      ingredients: ['Marinara', 'Italian Sausage', 'Dough', 'Cheese'],
+      address: [
+        {street: 'Aleea Culturii 14-16'},
+        {city: 'Braila'}
+      ]
     };
 
     // spread all intem from ingredients inside this array
@@ -44,6 +48,23 @@
     // so slice from the start to where we want and slice one after the one that we want to delete it, too
     const newComments = [...comments.slice(0, commentIndex), ...comments.slice(commentIndex + 1)];
     console.log(newComments);
+
+
+    // Deeply copy object
+    const updatedDish = { 
+      ...deepDish,
+      address: {
+        ...deepDish.address
+      }
+
+    };
+    console.log('deepDish', deepDish)
+    console.log('updatedDish', updatedDish)
+    console.log('===', updatedDish.size === deepDish.size)
+    updatedDish.size = 'Large'
+
+    console.log('deepDishafter', deepDish)
+    console.log('updatedDishafter', updatedDish)
 
   </script>
 </body>
